@@ -1,0 +1,18 @@
+---
+api: 2
+core: "8.x"
+
+projects:
+  # Core.
+  drupal:
+    type: "core"
+    download:
+      branch: "8.0.x"
+      working-copy: true
+
+  openchurch:
+    type: "profile"
+    download:
+      type: "git"
+      profile: "contributions/profiles/openchurch"
+      revision: "8.x-2.x"

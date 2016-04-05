@@ -1,0 +1,17 @@
+---
+api: 2
+core: "8.x"
+
+projects:
+  config_update:
+    version: 1.1
+    subdir: contrib
+
+  features:
+    version: 3.0-beta1
+    subdir: contrib
+
+  # Custom theme developed for OpenChurch
+  openchurch_theme:
+    type: theme
+    version: 2.7
