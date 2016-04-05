@@ -74,7 +74,7 @@ class RoboFile extends \Robo\Tasks {
     $this->taskDrushStack($this->drushBin)
       ->drupalRootDirectory('./html')
       ->siteInstall('openchurch')
-      ->dbUrl('mysql://root@localhost/drupal')
+      ->mysqlDbUrl('mysql://root@localhost/drupal')
       ->accountName('admin')
       ->accountPass('admin')
       ->run();
