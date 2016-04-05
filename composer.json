@@ -1,0 +1,25 @@
+{
+    "name": "drupal/openchurch",
+    "description": "The OpenChurch distribution is for churches and ministries. It is a flexible platform with common features for churches that can help streamline development of these websites.",
+    "type": "drupal-distribution",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Jay Callicott",
+            "email": "jrcallicott@gmail.com"
+        },
+        {
+            "name": "Dustin LeBlanc",
+            "email": "dustin.m.leblanc@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {},
+    "require-dev": {
+        "drupal/drupal-extension": "^3.1",
+        "boedah/robo-drush": "^2.2",
+        "drupal/console": "^0.11.1",
+        "phpspec/phpspec": "^2.5"
+    }
+}
