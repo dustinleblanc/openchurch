@@ -1,11 +1,24 @@
 default:
   suites:
-    default:
+    web_features:
+      paths: [ %paths.base%/features/web ]
       contexts:
+        - WebContext
         - Drupal\DrupalExtension\Context\DrupalContext
+        - Drupal\DrupalExtension\Context\MinkContext
+        - Drupal\DrupalExtension\Context\MessageContext
+        - Drupal\DrupalExtension\Context\DrushContext
   extensions:
     Behat\MinkExtension:
       goutte: ~
-      base_url: http://openchurch.dev/  # Replace with your site's URL
+      javascript_session: selenium2
+      selenium2:
+        wd_host: http://openchurch.dev:4444/wd/hub
+      base_url: http://openchurch.dev
     Drupal\DrupalExtension:
       blackbox: ~
+      api_driver: 'drupal'
+      drupal:
+        drupal_root: '/var/www/openchurch/drupal'
+      region_map:
+        content: "#content"
