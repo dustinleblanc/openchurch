@@ -72,6 +72,7 @@ class RoboFile extends \Robo\Tasks {
     $this->_exec('rm -rf html');
     $this->_exec("./vendor/bin/drush make -y --force-complete build-openchurch.make.yml html");
     $this->taskDrushStack($this->drushBin)
+      ->drupalRootDirectory('./html')
       ->siteInstall('openchurch')
       ->dbUrl('mysql://root@localhost/drupal')
       ->accountName('admin')
