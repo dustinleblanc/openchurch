@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/dustinleblanc/openchurch.png?label=ready&title=Ready)](http://waffle.io/dustinleblanc/openchurch)
 ## Getting Started
 
 Openchurch uses Greg Geerling's [DrupalVM](http://www.drupalvm.com/) as a consistent and predictable development environment. If you'd like to contribute, follow the steps below to get started (copied straight from DrupalVM docs).

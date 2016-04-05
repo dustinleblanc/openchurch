@@ -1,0 +1,26 @@
+language: php
+php:
+  - 5.4
+
+mysql:
+  database: drupal
+  username: root
+  encoding: utf8
+
+before_install:
+  - composer self-update
+  - export BASEDIR=${PWD}
+
+install:
+  - phpenv rehash
+  - composer install
+
+before_script:
+  - echo "sendmail_path='true'" >> `php --ini | grep "Loaded Configuration" | awk '{print $4}'`
+  - "./vendor/bin/robo build:test"
+  - $BASEDIR/vendor/bin/drush runserver --server=builtin 8080 --strict=0 &
+  - cd ..
+  - until netstat -an 2>/dev/null | grep '8080.*LISTEN'; do sleep 0.2; done
+
+script:
+  - $BASEDIR/vendor/bin/behat

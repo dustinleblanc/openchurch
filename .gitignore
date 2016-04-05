@@ -10,4 +10,6 @@
 vagrant_ansible_inventory_default
 config.yml
 Vagrantfile.local
+scripts/
 roles/
+html/
